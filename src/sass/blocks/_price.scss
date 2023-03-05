@@ -4,18 +4,28 @@
     padding: 60px 50px 0 50px;
     display: grid;
     grid-template-columns: repeat(2, 366px);
-    grid-template-rows: repeat(3, minmax(45px auto));
-    grid-auto-rows: minmax(45px auto);
+    grid-template-rows: repeat(3, minmax(45px, auto));
+    grid-auto-rows: minmax(45px, auto);
     justify-content: space-between;
     row-gap: 15px;
   }
   &__item {
+    position: relative;
     padding-left: 25px;
     display: grid;
     grid-template-columns: repeat(2, auto);
-    grid-template-rows: repeat(2, minmax(18px auto));
-    grid-auto-rows: minmax(18px auto);
+    grid-template-rows: repeat(2, minmax(18px, auto));
+    grid-auto-rows: minmax(18px, auto);
     row-gap: 5px;
+    &:before {
+      content: "";
+      width: 15px;
+      height: 15px;
+      border-radius: 100%;
+      background: $main-color;
+      position: absolute;
+      top: 3px;
+    }
   }
   &__type,
   &__count {
