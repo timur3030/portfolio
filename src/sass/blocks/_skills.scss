@@ -47,6 +47,11 @@
       background: #e8e4de;
       border-radius: 4px;
       grid-column: 1/3;
+      span {
+        background-color: $main-color;
+        height: 100%;
+        display: block;
+      }
     }
   }
 }
