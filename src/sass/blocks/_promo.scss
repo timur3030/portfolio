@@ -1,8 +1,19 @@
 .promo {
   min-height: 100vh;
   position: relative;
-  background: url(../img/main.jpg)  100% 50%/ cover no-repeat;
+  z-index: 2;
+  background: url(../img/main-bg.jpeg) center center / cover no-repeat;
   padding-top: 206px;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.4);
+    z-index: -1;
+  }
   &__title {
     width: 532px;
     margin-top: 9px;
