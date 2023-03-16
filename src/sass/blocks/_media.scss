@@ -117,16 +117,22 @@
       grid-template-columns: repeat(auto-fit, 320px);
       justify-content: space-between;
       padding: 0;
+      margin-top: 60px;
       column-gap: 0;
       &-line {
         width: 100%;
       }
     }
   }
+  .portfolio {
+    &__wrapper {
+      margin-top: 40px;
+    }
+  }
   .price {
     &__wrapper {
       grid-template-columns: repeat(auto-fit, 350px);
-      padding: 0;
+      padding: 40px 0 0 0;
     }
   }
   .contacts {
