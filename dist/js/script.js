@@ -2,7 +2,11 @@ const hamburger = document.querySelector(".hamburger"),
   menu = document.querySelector(".menu"),
   closeElem = document.querySelector(".menu__close"),
   overlay = document.querySelector(".menu__overlay"),
-  menuList = document.querySelectorAll(".menu__link");
+  menuList = document.querySelectorAll(".menu__link"),
+  contactBtn = document.querySelector(".contacts__btn"),
+  modal = document.querySelector(".modal"),
+  checkbox = document.querySelector(".checkbox"),
+  inputs = document.querySelectorAll(".input");
 
 hamburger.addEventListener("click", () => {
   menu.classList.add("active");
@@ -20,6 +24,20 @@ menuList.forEach((item) => {
   item.addEventListener("click", () => {
     menu.classList.remove("active");
   });
+});
+
+contactBtn.addEventListener("click", () => {
+  for (let input of [...inputs]) {
+    if (!input.value || !checkbox.checked) {
+      alert("Заполните все поля!");
+      break;
+    } else {
+      modal.classList.add("activate");
+      setTimeout(() => {
+        modal.classList.remove("activate");
+      }, 1000);
+    }
+  }
 });
 
 const counters = document.querySelectorAll(".skills__ratings-counter"),
