@@ -29,7 +29,6 @@ menuList.forEach((item) => {
 contactBtn.addEventListener("click", () => {
   for (let input of [...inputs]) {
     if (!input.value || !checkbox.checked) {
-      alert("Заполните все поля!");
       break;
     } else {
       modal.classList.add("activate");
