@@ -42,7 +42,7 @@ menuList.forEach((item) => {
 // });
 
 contactBtn.addEventListener("click", () => {
-  if (userName.value && userTel.value && checkbox.checked) {
+  if (userName.value && userMail.value && checkbox.checked) {
     modal.classList.add("activate");
     setTimeout(() => {
       modal.classList.remove("activate");
