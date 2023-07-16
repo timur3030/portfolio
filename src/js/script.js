@@ -6,7 +6,9 @@ const hamburger = document.querySelector(".hamburger"),
   contactBtn = document.querySelector(".contacts__btn"),
   modal = document.querySelector(".modal"),
   checkbox = document.querySelector(".checkbox"),
-  inputs = document.querySelectorAll(".input");
+  userName = document.querySelector("#name"),
+  userMail = document.querySelector("#email");
+  // inputs = document.querySelectorAll(".input");
 
 hamburger.addEventListener("click", () => {
   menu.classList.add("active");
@@ -26,16 +28,25 @@ menuList.forEach((item) => {
   });
 });
 
+// contactBtn.addEventListener("click", () => {
+//   for (let input of [...inputs]) {
+//     if (!input.value || !checkbox.checked) {
+//       break;
+//     } else {
+//       modal.classList.add("activate");
+//       setTimeout(() => {
+//         modal.classList.remove("activate");
+//       }, 1000);
+//     }
+//   }
+// });
+
 contactBtn.addEventListener("click", () => {
-  for (let input of [...inputs]) {
-    if (!input.value || !checkbox.checked) {
-      break;
-    } else {
-      modal.classList.add("activate");
-      setTimeout(() => {
-        modal.classList.remove("activate");
-      }, 1000);
-    }
+  if (userName.value && userTel.value && checkbox.checked) {
+    modal.classList.add("activate");
+    setTimeout(() => {
+      modal.classList.remove("activate");
+    }, 1500);
   }
 });
 
