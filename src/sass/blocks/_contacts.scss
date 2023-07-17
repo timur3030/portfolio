@@ -89,6 +89,7 @@
     display: grid;
     grid-template-columns: repeat(2, auto);
     column-gap: 35px;
+    align-items: baseline;
   }
   &__btn {
     border: none;
@@ -106,7 +107,8 @@
     input {
       margin-right: 10px;
     }
-    span {
+    label {
+      position: static;
       a {
         color: #0603cf;
       }

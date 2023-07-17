@@ -322,7 +322,7 @@
       grid-column: unset;
       grid-template-columns: 1fr;
       column-gap: unset;
-      row-gap: 20px;
+      row-gap: 30px;
     }
     &__btn {
       order: 2;
@@ -330,7 +330,10 @@
       margin: 0 auto;
     }
     &__policy {
-      width: 180px;
+      display: grid;
+      grid-template-columns: 30px 180px;
+      grid-template-rows: 40px;
+      width: unset;
       margin: 0 auto;
       line-height: 18px;
     }
