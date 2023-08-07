@@ -5,9 +5,6 @@
     display: grid;
     grid-template: repeat(2, 280px) / repeat(4, 280px);
     gap: 5px;
-    .furniture {
-      grid-column: 2/4;
-    }
   }
   &__item {
     transition: all 0.5s;
